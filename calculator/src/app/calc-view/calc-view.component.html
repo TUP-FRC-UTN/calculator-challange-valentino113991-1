@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="bordeo">
+        <div class="text-center">
+            <h4>Calculadora</h4>
+            <div class="mb-3">
+                <label class="mb-1" for="valorUno">Valor 1</label>
+                <input [value]="primerValor" (input)="onPrimerValorChange($event)" class="form-control" type="number"
+                    placeholder="Ingrese el primer valor">
+            </div>
+            <div class="mb-3">
+                <label class="mb-1" for="valorDos">Valor 2</label>
+                <input [value]="segundoValor" (input)="onSegundoValorChange($event)" class="mb-1" class="form-control"
+                    type="number" placeholder="Ingrese el segundo valor">
+            </div>
+            <div class="mb-3">
+                <label class="mb-1" for="resultado">Resultado</label>
+                <input [(ngModel)]="resultado" disabled class="mb-1" class="form-control" type="text"> 
+            </div>
+
+            <app-calc-actions [primerValor]="primerValor" [segundoValor]="segundoValor" (resultadoEmitido)="mostrarResultado($event)"
+            (eventoBorrado)="borrar()"></app-calc-actions>
+
+        </div>
+    </div>
+</div>

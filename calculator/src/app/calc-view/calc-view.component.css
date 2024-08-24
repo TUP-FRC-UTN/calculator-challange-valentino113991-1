@@ -1,0 +1,22 @@
+body{
+    height: 100%;
+}
+
+h4{
+    color: rgb(122, 13, 155);
+}
+
+.bordeo{
+    width: 368px;
+    border: 1px solid rgb(245, 207, 255);
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+@media (max-width: 650px){
+     .bordeo{
+        width: 100%;
+     }
+}
